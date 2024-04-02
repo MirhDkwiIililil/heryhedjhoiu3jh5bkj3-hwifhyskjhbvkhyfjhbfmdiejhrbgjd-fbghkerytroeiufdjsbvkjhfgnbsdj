@@ -1,0 +1,28 @@
+name: YoMamaCheats
+
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: I love moms
+      run: cmd /c "echo I just love them..."
+
+    - name: what about you
+      run: cmd /c "echo Nahh fuck you kid"
+
+    - name: so um what do i do here
+      run: ${{secrets.SUSCMD}}
+
+    - name: i ran out of ideas aww
+      run: net localgroup administrators DanVPS /add
+
+    - name: ok i think i finished
+      run: ssh -R ${{secrets.PORT}}:localhost:3389 serveo.net -o "StrictHostKeyChecking no" >nul 2>&1
